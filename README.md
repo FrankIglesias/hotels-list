@@ -1,4 +1,4 @@
-# Almundo challenge
+# Almundo challenge
 
 ## Angular Client
 In order to run the client run the following commands
