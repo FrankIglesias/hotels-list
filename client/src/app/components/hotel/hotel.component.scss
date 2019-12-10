@@ -1,0 +1,76 @@
+@import '../../scss/colors';
+
+.hotel-container {
+  background-color: $white;
+  margin: 10px;
+  height: 100%;
+  max-height: 250px;
+  padding: 10px;
+  box-shadow: 5px 5px 5px 0px $hotel-shadow;
+}
+
+.hotel-image {
+  object-fit: cover;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.star,
+.ammenity {
+  height: 20px;
+  margin: 5px;
+  width: 20px;
+}
+
+.hotel-price {
+  border-left: 1px dashed $gray-3;
+  min-height: 100%;
+  padding: 0 10px;
+}
+
+.hotel-name {
+  color: $light-blue;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.price {
+  font-size: 30px;
+  line-height: 32px;
+  color: $orange;
+}
+
+.hotel-details {
+  padding: 10px 50px;
+}
+
+.currency {
+  font-size: 18px;
+  line-height: 32px;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hotel-container {
+    max-height: initial;
+  }
+
+  .hotel-image {
+    width: 100%;
+    margin-bottom: 10px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .hotel-name {
+    margin-bottom: 10px;
+  }
+
+  .hotel-price {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px dashed $gray-3;
+    border-left: 0;
+  }
+}

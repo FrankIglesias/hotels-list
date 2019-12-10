@@ -1,0 +1,27 @@
+<ng-container>
+  <app-navbar></app-navbar>
+  <div class="row main-container column-sm">
+    <form class="column filter-container" [formGroup]="hotelsFilter" (ngSubmit)="searchHotel()">
+      <h3 class="filter-title bold">Filtros</h3>
+      <span class="filter-titles hotel-name">Nombre del hotel</span>
+      <div class="row">
+        <input type="text" formControlName="name" class="name-filter" placeholder="Ingrese nombre del hotel" />
+        <button type="submit" class="main-button search-button">Aceptar</button>
+      </div>
+      <span class="filter-titles stars-filter">Estrellas</span>
+      <div class="row stars-checkbox">
+        <input type="checkbox" value="all" id="all" formControlName="allStars" class="checkbox" />
+        <label for="all" class="bold">Todas las estrellas</label>
+      </div>
+      <div class="row middle" *ngFor="let star of stars.controls; let i = index" class="stars-checkbox">
+        <input type="checkbox" id="star-{{ 5 - i }}" [formControl]="star" class="checkbox" />
+        <label for="star-{{ 5 - i }}">
+          <app-stars [starsCount]="5-i"></app-stars>
+        </label>
+      </div>
+    </form>
+    <div class="hotel-list-container">
+      <app-hotel *ngFor="let hotel of hotels" [hotel]="hotel"></app-hotel>
+    </div>
+  </div>
+</ng-container>

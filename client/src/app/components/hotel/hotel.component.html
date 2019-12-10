@@ -1,0 +1,25 @@
+<ng-container>
+  <div class="row space-between hotel-container column-sm">
+    <img src="../../../assets/images/hotels/{{hotel.image}}" class="hotel-image" alt="{{hotel.name}}" />
+    <div class="column item-1">
+      <h3 class="hotel-name">{{hotel.name}}</h3>
+      <div class="row">
+        <img src="../../../assets/icons/filters/star.svg" *ngFor="let star of stars" class="star" />
+      </div>
+      <div class="row">
+        <img src="../../../assets/icons/amenities/{{ammenity}}.svg" *ngFor="let ammenity of hotel.amenities"
+          class="ammenity" alt="{{ammenity}}" />
+      </div>
+    </div>
+    <div class="column middle center hotel-price">
+      <span>
+        Precio por noche por habitación
+      </span>
+      <div class="row">
+        <span class="orange currency">ARS</span>
+        <span class="price bold">{{hotel.price}}</span>
+      </div>
+      <a class="main-button bold hotel-details" href="#">Ver hotel</a>
+    </div>
+  </div>
+</ng-container>
