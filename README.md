@@ -1,4 +1,4 @@
-# Almundo challenge
+# Hotels list
 
 ## Angular Client
 In order to run the client run the following commands
